@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-//[RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(CharacterController))]
 public class CharacterControl : MonoBehaviour
 {
     private PlayerInput playerInput;
