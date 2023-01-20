@@ -9,14 +9,13 @@ public class CharacterControl : MonoBehaviour
     private Vector3 playerVelocity;
     private float playerSpeed = 3.0f;
     private float gravityValue = -9.81f;
-    private Transform cameraTransform;
+    //private Transform cameraTransform;
     
     
     private void Start()
     {
-        //controller = gameObject.AddComponent<CharacterController>();
         playerInput = GetComponent<PlayerInput>();
-        cameraTransform = Camera.main.transform;
+        //cameraTransform = Camera.main.transform;
 
     }
 
@@ -28,9 +27,12 @@ public class CharacterControl : MonoBehaviour
         Vector3 move = new Vector3(input.x, 0, input.y);
         
         //use this if you ever want to have a more dynamic camera, corrects player movement.
+        /*
         move = move.x * cameraTransform.right + move.z * cameraTransform.forward;
         move.y = 0f;
+         */
         controller.Move(move * (Time.deltaTime * playerSpeed));
+       
 
         if (move != Vector3.zero)
         {
