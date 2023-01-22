@@ -7,14 +7,14 @@ public class CoroutineBehavior : MonoBehaviour
     public bool CanRun { get; set; }
     public UnityEvent AwakeEvent, startEvent,startCountEvent, repeatCountEvent, endCountEvent,repeatUntilFalseEvent;
     public IntData counterNum;
-    public float seconds = 3.0f;
+    public FloatData TicRate;
     
     private WaitForSeconds wfsObj;
     private WaitForFixedUpdate wffuObj;
 
     public void Awake()
     {
-        wfsObj = new WaitForSeconds(seconds);
+        wfsObj = new WaitForSeconds(TicRate.value);
         wffuObj = new WaitForFixedUpdate();
         startEvent.Invoke();
     }
