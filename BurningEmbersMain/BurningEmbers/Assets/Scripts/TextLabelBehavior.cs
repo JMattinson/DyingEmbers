@@ -1,17 +1,16 @@
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(Text))]
+[RequireComponent(typeof(TextMesh))]
 public class TextLabelBehavior : MonoBehaviour
 {
-    private Text label;
+    private TextMesh label;
     public UnityEvent startEvent;
 
     private void Start()
     {
-        label = GetComponent<Text>();
+        label = GetComponent<TextMesh>();
         startEvent.Invoke();
     }
 

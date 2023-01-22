@@ -1,14 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
 
 public class EnemyBipedBehavior : EnemyBase
 
 {
-
+    public UnityEvent DieEvent;
     public IntData bipedMaxHp;
     public IntData playerCurrentDamage;
-    // Start is called before the first frame update
+
     public override void Start()
     {
         currentHp = bipedMaxHp.value;
@@ -33,10 +33,14 @@ public class EnemyBipedBehavior : EnemyBase
     {
         currentHp -= playerCurrentDamage.value;
         print(currentHp);
+        if (currentHp <= 0)
+        {
+            Die();
+        }
     }
 
     public override void Die()
     {
-        throw new System.NotImplementedException();
+        DieEvent.Invoke();
     }
 }
