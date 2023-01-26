@@ -1,17 +1,23 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class CollBehavior : MonoBehaviour
 {
-    public UnityEvent collisionStartEvent, collisionEndEvent;
+    public UnityEvent triggerStartEvent, triggerEndEvent,collisionEvent;
 
     private void OnTriggerEnter(Collider other)
     {
-        collisionStartEvent.Invoke();
+        triggerStartEvent.Invoke();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        collisionEndEvent.Invoke();
+        triggerEndEvent.Invoke();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        collisionEvent.Invoke();
     }
 }
