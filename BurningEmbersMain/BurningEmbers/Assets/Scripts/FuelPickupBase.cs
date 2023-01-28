@@ -7,14 +7,14 @@ using UnityEngine.Events;
 
 public class FuelPickupBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 {
-    private int currentHealth;
-    public UnityEvent pickupEvent, burningEvent,stopBurningEvent,burnUpEvent;
+    private int currentHp;
+    public UnityEvent stopBurningEvent,burnUpEvent;
     public IntData pickupMaxHp;
     public IntData pickupCurrentDamage;
 
     private void Start()
     {
-        currentHealth = pickupMaxHp.value;
+        currentHp = pickupMaxHp.value;
     }
 
 
@@ -22,16 +22,21 @@ public class FuelPickupBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 
     public void Burning()
     {
-        throw new NotImplementedException();
+        currentHp -= pickupCurrentDamage.value;
+        print(currentHp);
+        if (currentHp <= 0)
+        {
+            BurnUp();
+        }    
     }
 
     public void BurnUp()
     {
-        throw new NotImplementedException();
+        burnUpEvent.Invoke();
     }
 
     public void StopBurning()
     {
-        throw new NotImplementedException();
+        stopBurningEvent.Invoke();
     }
 }

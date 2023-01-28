@@ -1728,6 +1728,8 @@ GameObject:
   - component: {fileID: 1731522084}
   - component: {fileID: 1731522083}
   - component: {fileID: 1731522082}
+  - component: {fileID: 1731522086}
+  - component: {fileID: 1731522087}
   m_Layer: 0
   m_Name: PickupHitbox
   m_TagString: Untagged
@@ -1762,24 +1764,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae974109942281443a6ab333b9839d52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickupEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1731522080}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  burningEvent:
-    m_PersistentCalls:
-      m_Calls: []
   stopBurningEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -1875,6 +1859,95 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731522080}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1731522086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731522080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2308e012d70723447bf59a2645d069e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerStartEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1731522087}
+        m_TargetAssemblyTypeName: CoroutineBehavior, Assembly-CSharp
+        m_MethodName: StartRepeatUntilFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  triggerEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  collisionEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1731522080}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1731522087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731522080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71737ea516ebbcc4d836c5620f084dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AwakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatUntilFalseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1731522082}
+        m_TargetAssemblyTypeName: FuelPickupBase, Assembly-CSharp
+        m_MethodName: Burning
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  counterNum: {fileID: 0}
+  TicRate: {fileID: 11400000, guid: b3d4dcbe4148161418195171029067fd, type: 2}
 --- !u!1 &1824614199
 GameObject:
   m_ObjectHideFlags: 0
