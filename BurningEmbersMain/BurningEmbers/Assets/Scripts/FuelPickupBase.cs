@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class FuelPickupBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 {
     private int currentHp;
-    public UnityEvent stopBurningEvent,burnUpEvent;
+    public UnityEvent BurningEvent,stopBurningEvent,burnUpEvent;
     public IntData pickupMaxHp;
     public IntData pickupCurrentDamage;
 
@@ -22,6 +22,7 @@ public class FuelPickupBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 
     public void Burning()
     {
+        BurningEvent.Invoke();
         currentHp -= pickupCurrentDamage.value;
         print(currentHp);
         if (currentHp <= 0)
@@ -37,6 +38,7 @@ public class FuelPickupBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 
     public void StopBurning()
     {
+        currentHp = pickupMaxHp.value;
         stopBurningEvent.Invoke();
     }
 }
