@@ -17,7 +17,7 @@ public class CameraFollowBehavior : MonoBehaviour
 
    public float minZoom = 40f;
    public float maxZoom = 10f;
-   public float zoomlimit = 50f;
+   public float zoomLimit = 50f;
 
 
    private void Start()
@@ -44,7 +44,7 @@ public class CameraFollowBehavior : MonoBehaviour
 
    void CameraZoom()
    {
-      float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomlimit);
+      float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance() / zoomLimit);
       cam.fieldOfView = Mathf.Lerp(cam.fieldOfView,newZoom,Time.deltaTime);
    }
 

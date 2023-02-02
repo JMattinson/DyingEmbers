@@ -1,7 +1,3 @@
-using UnityEngine;
-
-
-
 public interface IBurning
 {
     public void Burning();
