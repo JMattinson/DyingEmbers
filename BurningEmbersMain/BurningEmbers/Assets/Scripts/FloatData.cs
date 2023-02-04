@@ -13,6 +13,17 @@ public class FloatData : ScriptableObject
     {
         value = num;
     }
+    
+    public void SetValue(FloatData num)
+    {
+        value = num.value;
+    }
+    
+    public void UpdateValue(FloatData num)
+    {
+        value += num.value;
+    }
+    
     public void UpdateValue(float num)
     {
     
@@ -28,12 +39,28 @@ public class FloatData : ScriptableObject
             onMinEvent.Invoke();
         }
     }
+    
+    public void CheckMin(FloatData num)
+    {
+        if (value <= num.value)
+        {
+            value = num.value;
+            onMinEvent.Invoke();
+        }
+    }
 
     public void CheckMax(float num)
     {
         if (value >= num)
         {
             value = num;
+        }
+    }
+    public void CheckMax(FloatData num)
+    {
+        if (value >= num.value)
+        {
+            value = num.value;
         }
     }
     

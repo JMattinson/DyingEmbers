@@ -35,6 +35,11 @@ public class IntData : ScriptableObject
     
         value += num;
     }
+    public void UpdateValue(IntData num)
+    {
+    
+        value += num.value;
+    }
 
     
 }

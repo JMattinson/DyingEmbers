@@ -8,6 +8,7 @@ public class ImageBehavior : MonoBehaviour
     public UnityEvent startEvent;
 
     private Image imageObj;
+    public FloatData maxHealth;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,7 @@ public class ImageBehavior : MonoBehaviour
     // Update is called once per frame
     public void UpdateImage(FloatData data)
     {
-        
+        imageObj.fillAmount = (data.value / maxHealth.value);
+
     }
 }
