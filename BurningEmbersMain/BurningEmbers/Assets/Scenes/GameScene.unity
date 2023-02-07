@@ -1991,7 +1991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1318321041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2134,7 +2134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351228717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.91, y: 1.0460025, z: 2.92}
+  m_LocalPosition: {x: 0.01, y: 1.0460025, z: -8.56}
   m_LocalScale: {x: 1, y: 2.0023093, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2548,7 +2548,7 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 64
-  sightRange: 3.5
+  sightRange: 5
   attackRange: 0.68
   PlayerInSight: 0
   PlayerInAttack: 0

@@ -62,12 +62,10 @@ public class EnemyBipedBehavior : EnemyBase
             Die();
         }
     }
-
     public override void Die()
     {
         dieEvent.Invoke();
     }
-
     public void Update()
     {
         PlayerInSight = Physics.CheckSphere(transform.position, sightRange,Player);
@@ -80,7 +78,6 @@ public class EnemyBipedBehavior : EnemyBase
         }
     
     }
-    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
