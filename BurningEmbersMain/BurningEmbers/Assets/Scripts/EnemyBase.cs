@@ -5,12 +5,14 @@ public abstract class EnemyBase : MonoBehaviour
 
     public int currentHp;
     
-    public abstract void Start();
+    public abstract void Awake();
 
     public virtual void Wander()
     {
         print("wandering");
     }
+
+    public abstract void SearchWalkPoint();
     
     public abstract void Hunt();
 
