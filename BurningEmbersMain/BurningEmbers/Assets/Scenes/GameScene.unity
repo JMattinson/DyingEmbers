@@ -2420,6 +2420,7 @@ GameObject:
   - component: {fileID: 1553637801}
   - component: {fileID: 1553637802}
   - component: {fileID: 1553637800}
+  - component: {fileID: 1553637804}
   - component: {fileID: 1553637803}
   m_Layer: 8
   m_Name: EnemyBipedEntity
@@ -2548,7 +2549,7 @@ MonoBehaviour:
   Player:
     serializedVersion: 2
     m_Bits: 64
-  sightRange: 5
+  sightRange: 8.75
   attackRange: 0.68
   PlayerInSight: 0
   PlayerInAttack: 0
@@ -2579,9 +2580,33 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1553637803}
+        m_TargetAssemblyTypeName: UnityEngine.AI.NavMeshAgent, UnityEngine
+        m_MethodName: set_speed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   triggerEndEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1553637803}
+        m_TargetAssemblyTypeName: UnityEngine.AI.NavMeshAgent, UnityEngine
+        m_MethodName: set_speed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 3
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1553637802}
         m_TargetAssemblyTypeName: UnityEngine.MonoBehaviour, UnityEngine
         m_MethodName: StopAllCoroutines
@@ -2639,7 +2664,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  counterNum: {fileID: 11400000, guid: 78d9b165ef539bd458be3c804630c562, type: 2}
+  counterNum: {fileID: 0}
   TicRate: {fileID: 11400000, guid: b3d4dcbe4148161418195171029067fd, type: 2}
 --- !u!195 &1553637803
 NavMeshAgent:
@@ -2663,6 +2688,62 @@ NavMeshAgent:
   m_BaseOffset: 0.49999997
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1553637804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1553637794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71737ea516ebbcc4d836c5620f084dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AwakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1553637804}
+        m_TargetAssemblyTypeName: CoroutineBehavior, Assembly-CSharp
+        m_MethodName: StartRepeatUntilFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  endCountEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  repeatUntilFalseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1553637800}
+        m_TargetAssemblyTypeName: EnemyBipedBehavior, Assembly-CSharp
+        m_MethodName: Think
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  counterNum: {fileID: 0}
+  TicRate: {fileID: 11400000, guid: b3d4dcbe4148161418195171029067fd, type: 2}
 --- !u!1 &1572671313
 GameObject:
   m_ObjectHideFlags: 0

@@ -66,7 +66,7 @@ public class EnemyBipedBehavior : EnemyBase
     {
         dieEvent.Invoke();
     }
-    public void Update()
+    public void Think()
     {
         PlayerInSight = Physics.CheckSphere(transform.position, sightRange,Player);
         if (PlayerInSight) Hunt();
