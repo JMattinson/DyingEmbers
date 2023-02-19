@@ -5,7 +5,7 @@ public abstract class EnemyBase : MonoBehaviour
 
     public int currentHp;
     
-    public abstract void Awake();
+    public abstract void Start();
 
     public virtual void Wander()
     {

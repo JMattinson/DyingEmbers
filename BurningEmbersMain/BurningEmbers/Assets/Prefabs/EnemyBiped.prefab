@@ -32,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8916703188726591864}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.08, z: 0}
+  m_LocalPosition: {x: 0.7, y: 1.08, z: 3.2}
   m_LocalScale: {x: 1, y: 2.1309, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -247,6 +247,21 @@ MonoBehaviour:
   attackEvent:
     m_PersistentCalls:
       m_Calls: []
+  EnableEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8916703188726591862}
+        m_TargetAssemblyTypeName: CoroutineBehavior, Assembly-CSharp
+        m_MethodName: StartRepeatUntilFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   bipedMaxHp: {fileID: 11400000, guid: 2abea0caceb10b54887d032122ae1390, type: 2}
   playerCurrentDamage: {fileID: 11400000, guid: a6de159db5c6aad479e2e415e346949b, type: 2}
   playerPos: {fileID: 0}
@@ -354,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8916703189530511503
 Transform:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
@@ -7,7 +8,7 @@ public class EnemyBipedBehavior : EnemyBase
 
 {
     [Header("Entity Management")]
-    public UnityEvent dieEvent, attackEvent;
+    public UnityEvent dieEvent, attackEvent, EnableEvent;
     public IntData bipedMaxHp;
     public IntData playerCurrentDamage;
     
@@ -21,7 +22,7 @@ public class EnemyBipedBehavior : EnemyBase
     public float sightRange, attackRange;
     public bool PlayerInSight, PlayerInAttack;
 
-    public override void Awake()
+    public override void Start()
     {
         
         currentHp = bipedMaxHp.value;
@@ -55,6 +56,7 @@ public class EnemyBipedBehavior : EnemyBase
     {
         PlayerInSight = true;
         currentHp -= playerCurrentDamage.value;
+        print(currentHp);
         if (currentHp <= 0)
         {
             Die();
@@ -66,6 +68,7 @@ public class EnemyBipedBehavior : EnemyBase
     }
     public void Think()
     {
+        
         PlayerInSight = Physics.CheckSphere(transform.position, sightRange,Player);
         if (PlayerInSight) Hunt();
         //if (PlayerInAttack) Attack();
@@ -76,6 +79,14 @@ public class EnemyBipedBehavior : EnemyBase
         }
     
     }
+
+    public void OnEnable()
+    {
+        currentHp = bipedMaxHp.value;
+        print(currentHp);
+        EnableEvent.Invoke();
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
