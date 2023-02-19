@@ -43,7 +43,6 @@ public class EnemyBipedBehavior : EnemyBase
     public override void Hunt()
     {
         agent.SetDestination(playerPos.position);
-        print(agent.destination);
     }
 
     public override void Attack()
@@ -56,7 +55,6 @@ public class EnemyBipedBehavior : EnemyBase
     {
         PlayerInSight = true;
         currentHp -= playerCurrentDamage.value;
-        print(currentHp);
         if (currentHp <= 0)
         {
             Die();
