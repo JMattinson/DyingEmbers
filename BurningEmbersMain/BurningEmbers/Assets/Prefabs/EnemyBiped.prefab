@@ -169,9 +169,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  collisionEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &8916703188726591856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +229,7 @@ MonoBehaviour:
   dieEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8916703188726591864}
+      - m_Target: {fileID: 8916703189530511502}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -536,8 +533,5 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   triggerEndEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  collisionEvent:
     m_PersistentCalls:
       m_Calls: []

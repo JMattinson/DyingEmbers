@@ -7,7 +7,7 @@ public class FloatData : ScriptableObject
 {
   
     public float value;
-    public UnityEvent onMinEvent;
+    public UnityEvent onMinEvent, onMaxEvent;
 
     public void SetValue(float num)
     {
@@ -54,6 +54,7 @@ public class FloatData : ScriptableObject
         if (value >= num)
         {
             value = num;
+            onMaxEvent.Invoke();
         }
     }
     public void CheckMax(FloatData num)
@@ -61,6 +62,7 @@ public class FloatData : ScriptableObject
         if (value >= num.value)
         {
             value = num.value;
+            onMaxEvent.Invoke();
         }
     }
     
