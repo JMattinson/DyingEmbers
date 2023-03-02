@@ -9,9 +9,9 @@ public class SceneChangeBehavior : MonoBehaviour
         SceneManager.LoadScene("Scenes/GameScene");
     }
 
-    public void GameReturn()
+    public void GameLevelComplete()
     {
-        
+        SceneManager.LoadScene("Scenes/LevelTransitionScene");
     }
     public void GameOver()
     {

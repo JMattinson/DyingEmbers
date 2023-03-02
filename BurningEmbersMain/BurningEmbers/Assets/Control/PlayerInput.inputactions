@@ -4,30 +4,8 @@
         {
             "name": "Player",
             "id": "35106aea-16e5-414c-99ea-1ce3cac99d85",
-            "actions": [
-                {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "cd253c2d-4935-4ee2-8a7d-c5e56e8aa09c",
-                    "expectedControlType": "Stick",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "978bfe49-cc26-4a3d-ab7b-7d7a29327403",
-                    "path": "<AndroidJoystick>/stick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Gamepad;Touch",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
+            "actions": [],
+            "bindings": []
         }
     ],
     "controlSchemes": [

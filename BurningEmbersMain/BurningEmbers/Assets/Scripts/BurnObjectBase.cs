@@ -32,6 +32,7 @@ public class BurnObjectBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 
     public void BurnUp()
     {
+        print("Burn Up!");
         burnUpEvent.Invoke();
     }
 

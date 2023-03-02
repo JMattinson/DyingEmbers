@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolList:
-  - {fileID: 8916703189530511503, guid: 838a3a15d4b3c8748ba19b8a2c766fbc, type: 3}
-  - {fileID: 8916703189530511503, guid: 838a3a15d4b3c8748ba19b8a2c766fbc, type: 3}
-  - {fileID: 8916703189530511503, guid: 838a3a15d4b3c8748ba19b8a2c766fbc, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   seconds: 2
   canRun: 1
-  spawns: {fileID: 0}
+  Spawns: {fileID: 11400000, guid: 5a974c0b370cf3243b358e4d490ac655, type: 2}

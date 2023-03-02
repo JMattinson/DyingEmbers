@@ -12,6 +12,7 @@ public class PoolingBehavior : MonoBehaviour
     private WaitForSeconds wfsObj;
     private int i;
     public bool canRun = true;
+    public Vector3DataList Spawns;
 
     IEnumerator Start()
     {
@@ -21,13 +22,14 @@ public class PoolingBehavior : MonoBehaviour
         {
 
             yield return wfsObj;
-            poolList[i].position = Vector3.zero;
+            poolList[i].position = Spawns.vector3List[i].value;
             poolList[i].gameObject.SetActive(true);
             print("Spawning" + i);
             i++;
             if (i > poolList.Count - 1)
             {
                 i = 0;
+                
 
             }
 
