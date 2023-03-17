@@ -29,7 +29,7 @@ public class PoolingBehavior : MonoBehaviour
             if (i > poolList.Count - 1)
             {
                 i = 0;
-                
+                canRun = false;
 
             }
 
