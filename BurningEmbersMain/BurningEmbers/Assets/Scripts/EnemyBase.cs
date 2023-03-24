@@ -19,9 +19,13 @@ public abstract class EnemyBase : MonoBehaviour
     public abstract void Attack();
     
     public abstract void TakeDamage();
+    
+    public abstract void Regen();
 
     
     public abstract void Die();
+    
+    public abstract void Respawn();
 
 
 }

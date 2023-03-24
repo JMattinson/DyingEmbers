@@ -8,7 +8,7 @@ public class EnemyBipedBehavior : EnemyBase
 
 {
     [Header("Entity Management")]
-    public UnityEvent dieEvent, attackEvent, EnableEvent;
+    public UnityEvent dieEvent, attackEvent, EnableEvent,RespawnEvent;
     public IntData bipedMaxHp;
     public IntData playerCurrentDamage;
     
@@ -62,10 +62,27 @@ public class EnemyBipedBehavior : EnemyBase
             Die();
         }
     }
+
+    public override void Regen()
+    {
+        if (currentHp >= bipedMaxHp.value)
+        {
+            Respawn();
+        }
+        currentHp += 1;
+    }
+
     public override void Die()
     {
         dieEvent.Invoke();
     }
+
+    public override void Respawn()
+    {
+        RespawnEvent.Invoke();
+    }
+
+
     public void Think()
     {
         
