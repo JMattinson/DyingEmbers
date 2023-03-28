@@ -20,10 +20,9 @@ public class PoolingBehavior : MonoBehaviour
         wfsObj = new WaitForSeconds(seconds);
         while (canRun)
         {
-
+            Instantiate(poolList[i]);
             yield return wfsObj;
             poolList[i].position = Spawns.vector3List[i].value;
-            poolList[i].gameObject.SetActive(true);
             print("Spawning" + i);
             i++;
             if (i > poolList.Count - 1)

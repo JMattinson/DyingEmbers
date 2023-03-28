@@ -8,29 +8,31 @@ public class EnemyBipedBehavior : EnemyBase
 
 {
     [Header("Entity Management")]
-    public UnityEvent dieEvent, attackEvent, EnableEvent,RespawnEvent;
-    public IntData bipedMaxHp;
+    public UnityEvent dieEvent, attackEvent,damageEvent, EnableEvent,RespawnEvent;
+    public IntData bipedMaxHp, EnCurrentHp;
     public IntData playerCurrentDamage;
     
 
     [Header("Navigation")]
-    public Transform playerPos,homePos; 
+    public Transform playerPos; 
     private NavMeshAgent agent;
     public LayerMask Ground, Player;
 
 
     public float sightRange, attackRange;
     public bool PlayerInSight, PlayerInAttack;
+    
 
     public override void Start()
     {
-        
-        currentHp = bipedMaxHp.value;
+
+        EnCurrentHp.value = bipedMaxHp.value;
         agent = GetComponent<NavMeshAgent>();
         playerPos = GameObject.Find("Player").transform;
-        agent.SetDestination(homePos.position);
-        PlayerInSight = false; 
+        PlayerInSight = true;
+        
     }
+
 
     public override void Wander()
     {
@@ -55,9 +57,9 @@ public class EnemyBipedBehavior : EnemyBase
     public override void TakeDamage()
     {
         PlayerInSight = true;
-        currentHp -= playerCurrentDamage.value;
-        print(currentHp);
-        if (currentHp <= 0)
+        EnCurrentHp.value -= playerCurrentDamage.value;
+        damageEvent.Invoke();
+        if (EnCurrentHp.value <= 0)
         {
             Die();
         }
@@ -65,11 +67,11 @@ public class EnemyBipedBehavior : EnemyBase
 
     public override void Regen()
     {
-        if (currentHp >= bipedMaxHp.value)
+        if (EnCurrentHp.value >= bipedMaxHp.value)
         {
             Respawn();
         }
-        currentHp += 1;
+        EnCurrentHp.value += 1;
     }
 
     public override void Die()
@@ -86,21 +88,16 @@ public class EnemyBipedBehavior : EnemyBase
     public void Think()
     {
         
-        PlayerInSight = Physics.CheckSphere(transform.position, sightRange,Player);
+        PlayerInAttack = Physics.CheckSphere(transform.position, attackRange,Player);
         if (PlayerInSight) Hunt();
         //if (PlayerInAttack) Attack();
-        else
-        {
-            agent.SetDestination(homePos.position);
-            PlayerInSight = false;
-        }
-    
+
     }
 
     public void OnEnable()
     {
-        currentHp = bipedMaxHp.value;
-        print(currentHp);
+        EnCurrentHp.value = bipedMaxHp.value;
+        print(EnCurrentHp);
         EnableEvent.Invoke();
     }
 

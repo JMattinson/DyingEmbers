@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8916703189530511503
 Transform:
   m_ObjectHideFlags: 0
@@ -267,7 +267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8916703189530511502}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 1.08, z: 3.2}
+  m_LocalPosition: {x: -13, y: 0, z: 0}
   m_LocalScale: {x: 0.7407408, y: 1.5784445, z: 0.7407408}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -504,6 +504,21 @@ MonoBehaviour:
   attackEvent:
     m_PersistentCalls:
       m_Calls: []
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2060664223}
+        m_TargetAssemblyTypeName: ImageBehavior, Assembly-CSharp
+        m_MethodName: UpdateImage
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: d16a01d502c8aa14ca2561388fcaeaac, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EnableEvent:
     m_PersistentCalls:
       m_Calls:
@@ -523,9 +538,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   bipedMaxHp: {fileID: 11400000, guid: 2abea0caceb10b54887d032122ae1390, type: 2}
+  EnCurrentHp: {fileID: 11400000, guid: d16a01d502c8aa14ca2561388fcaeaac, type: 2}
   playerCurrentDamage: {fileID: 11400000, guid: a6de159db5c6aad479e2e415e346949b, type: 2}
   playerPos: {fileID: 0}
-  homePos: {fileID: 0}
   Ground:
     serializedVersion: 2
     m_Bits: 8

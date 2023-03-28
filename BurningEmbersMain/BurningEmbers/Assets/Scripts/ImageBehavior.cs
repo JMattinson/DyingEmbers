@@ -23,4 +23,9 @@ public class ImageBehavior : MonoBehaviour
         imageObj.fillAmount = (data.value / maxHealth.value);
 
     }
+    public void UpdateImage(IntData data)
+    {
+        imageObj.fillAmount = (data.value / maxHealth.value);
+
+    }
 }
