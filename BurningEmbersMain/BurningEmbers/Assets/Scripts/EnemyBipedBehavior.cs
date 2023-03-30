@@ -9,7 +9,7 @@ public class EnemyBipedBehavior : EnemyBase
 {
     [Header("Entity Management")]
     public UnityEvent dieEvent, attackEvent,damageEvent, EnableEvent,RespawnEvent;
-    public IntData bipedMaxHp, EnCurrentHp;
+    public FloatData bipedMaxHp, EnCurrentHp;
     public IntData playerCurrentDamage;
     
 
@@ -58,6 +58,7 @@ public class EnemyBipedBehavior : EnemyBase
     {
         PlayerInSight = true;
         EnCurrentHp.value -= playerCurrentDamage.value;
+        print(EnCurrentHp.value);
         damageEvent.Invoke();
         if (EnCurrentHp.value <= 0)
         {
@@ -97,7 +98,7 @@ public class EnemyBipedBehavior : EnemyBase
     public void OnEnable()
     {
         EnCurrentHp.value = bipedMaxHp.value;
-        print(EnCurrentHp);
+        print(EnCurrentHp.value);
         EnableEvent.Invoke();
     }
 

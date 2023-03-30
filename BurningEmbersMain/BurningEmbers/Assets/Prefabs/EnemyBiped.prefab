@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 2060664224}
   - component: {fileID: 2060664223}
   - component: {fileID: 2060664222}
+  - component: {fileID: 3951682649368750110}
   m_Layer: 5
   m_Name: Healthbar
   m_TagString: Untagged
@@ -193,20 +194,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 6b6aff87af15ce94290a17fae3541103, type: 2}
-        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: d34bf284dba95604b904d47968be907b, type: 2}
-          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 25
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  maxHealth: {fileID: 11400000, guid: d34bf284dba95604b904d47968be907b, type: 2}
+      m_Calls: []
+  maxHealth: {fileID: 11400000, guid: 27b2213b482d9e348a49e028dd163bd9, type: 2}
 --- !u!114 &2060664222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +203,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2060664220}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dd6ef6e9f5b6ff478319e6e8e84c486, type: 3}
   m_Name: 
@@ -228,13 +217,26 @@ MonoBehaviour:
         m_MethodName: UpdateImage
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 6b6aff87af15ce94290a17fae3541103, type: 2}
-          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3951682649368750110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060664220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09fe96196401e9344b789821f342d65e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusCam: {fileID: 0}
 --- !u!1 &8916703189530511502
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +515,7 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: d16a01d502c8aa14ca2561388fcaeaac, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -537,7 +539,7 @@ MonoBehaviour:
   RespawnEvent:
     m_PersistentCalls:
       m_Calls: []
-  bipedMaxHp: {fileID: 11400000, guid: 2abea0caceb10b54887d032122ae1390, type: 2}
+  bipedMaxHp: {fileID: 11400000, guid: 27b2213b482d9e348a49e028dd163bd9, type: 2}
   EnCurrentHp: {fileID: 11400000, guid: d16a01d502c8aa14ca2561388fcaeaac, type: 2}
   playerCurrentDamage: {fileID: 11400000, guid: a6de159db5c6aad479e2e415e346949b, type: 2}
   playerPos: {fileID: 0}
@@ -596,6 +598,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8994552715415946973}
         m_TargetAssemblyTypeName: EnemyBipedBehavior, Assembly-CSharp
         m_MethodName: Think
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3951682649368750110}
+        m_TargetAssemblyTypeName: BilboardBehavior, Assembly-CSharp
+        m_MethodName: Billboard
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

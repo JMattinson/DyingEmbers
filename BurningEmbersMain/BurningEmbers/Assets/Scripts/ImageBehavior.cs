@@ -10,6 +10,7 @@ public class ImageBehavior : MonoBehaviour
     private Image imageObj;
     public FloatData maxHealth;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,6 @@ public class ImageBehavior : MonoBehaviour
 
     // Update is called once per frame
     public void UpdateImage(FloatData data)
-    {
-        imageObj.fillAmount = (data.value / maxHealth.value);
-
-    }
-    public void UpdateImage(IntData data)
     {
         imageObj.fillAmount = (data.value / maxHealth.value);
 

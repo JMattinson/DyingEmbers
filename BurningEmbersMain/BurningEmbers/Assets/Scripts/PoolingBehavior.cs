@@ -23,7 +23,7 @@ public class PoolingBehavior : MonoBehaviour
             Instantiate(poolList[i]);
             yield return wfsObj;
             poolList[i].position = Spawns.vector3List[i].value;
-            print("Spawning" + i);
+            //print("Spawning" + i);
             i++;
             if (i > poolList.Count - 1)
             {
