@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.AI;
@@ -11,7 +10,8 @@ public class EnemyBipedBehavior : EnemyBase
     public UnityEvent dieEvent, attackEvent,damageEvent, EnableEvent,RespawnEvent;
     public FloatData bipedMaxHp, EnCurrentHp;
     public IntData playerCurrentDamage;
-    
+    public UnityAction<ImageBehavior> UpdateImage;
+
 
     [Header("Navigation")]
     public Transform playerPos; 
@@ -26,6 +26,7 @@ public class EnemyBipedBehavior : EnemyBase
     public override void Start()
     {
 
+        EnCurrentHp = ScriptableObject.CreateInstance<FloatData>();
         EnCurrentHp.value = bipedMaxHp.value;
         agent = GetComponent<NavMeshAgent>();
         playerPos = GameObject.Find("Player").transform;
@@ -58,8 +59,8 @@ public class EnemyBipedBehavior : EnemyBase
     {
         PlayerInSight = true;
         EnCurrentHp.value -= playerCurrentDamage.value;
-        print(EnCurrentHp.value);
-        damageEvent.Invoke();
+        //UpdateImage.Invoke(); How the hell is this supposed to work goddamnit?!?!
+        damageEvent.Invoke();;
         if (EnCurrentHp.value <= 0)
         {
             Die();
