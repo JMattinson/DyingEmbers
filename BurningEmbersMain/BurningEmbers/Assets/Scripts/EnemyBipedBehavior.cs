@@ -8,7 +8,7 @@ public class EnemyBipedBehavior : EnemyBase
 {
     [Header("Entity Management")]
     public UnityEvent dieEvent, attackEvent,damageEvent, EnableEvent,RespawnEvent;
-    public FloatData bipedMaxHp, EnCurrentHp;
+    public FloatData bipedMaxHp, EnCurrentHp,enpassHP;
     public IntData playerCurrentDamage;
     public UnityAction<ImageBehavior> UpdateImage;
 
@@ -59,8 +59,8 @@ public class EnemyBipedBehavior : EnemyBase
     {
         PlayerInSight = true;
         EnCurrentHp.value -= playerCurrentDamage.value;
-        //UpdateImage.Invoke(); How the hell is this supposed to work goddamnit?!?!
-        damageEvent.Invoke();;
+        enpassHP.value = EnCurrentHp.value;
+        damageEvent.Invoke();
         if (EnCurrentHp.value <= 0)
         {
             Die();

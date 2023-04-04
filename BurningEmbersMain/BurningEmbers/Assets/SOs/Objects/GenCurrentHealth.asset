@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 29d21e7e2d56f2147bbc2242f0f1b138, type: 3}
-  m_Name: PickupMaxHealth 1
+  m_Name: GenCurrentHealth
   m_EditorClassIdentifier: 
-  value: 100
+  value: 0
   onMinEvent:
     m_PersistentCalls:
       m_Calls: []

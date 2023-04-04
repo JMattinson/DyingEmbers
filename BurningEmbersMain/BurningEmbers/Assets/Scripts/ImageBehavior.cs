@@ -9,6 +9,7 @@ public class ImageBehavior : MonoBehaviour
 
     private Image imageObj;
     public FloatData maxHealth;
+    public GameAction gameActionObj;
     
     
     // Start is called before the first frame update

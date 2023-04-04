@@ -942,7 +942,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7076082477456306667, guid: 82745012d0e0d6347a3b969dee0340a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82745012d0e0d6347a3b969dee0340a3, type: 3}
@@ -4759,6 +4759,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: {fileID: 11400000, guid: 6bdcd6561c3a6cd4686c90ea62ef697b, type: 2}
+  gameActionObj: {fileID: 0}
 --- !u!114 &839474455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5823,6 +5824,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: {fileID: 11400000, guid: d34bf284dba95604b904d47968be907b, type: 2}
+  gameActionObj: {fileID: 0}
 --- !u!114 &1572671316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6156,7 +6158,7 @@ MonoBehaviour:
   _assetName: LiftFinal2
   _assetOpName: jaden::dev::Object/LiftFinal::4.0
   _assetHelp: 
-  _assetID: 29
+  _assetID: -1
   _assetPath: Assets/Digital Assets/backup/object_Lift01_bak2.hdanc
   _loadAssetFromMemory: 0
   _alwaysOverwriteOnLoad: 0

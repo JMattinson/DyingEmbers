@@ -5,16 +5,15 @@ using UnityEngine.Events;
 
 public class BurnObjectBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 {
-    private float currentHp;
     public UnityEvent BurningEvent,stopBurningEvent,burnUpEvent;
-    public FloatData pickupMaxHp;
-    public IntData pickupCurrentDamage;
+    public FloatData ObMaxHp,ObMinHp,ObCurrentHp,ObPassingHp;
+    public IntData ObCurrentDamage;
     
     
 
     private void Start()
     {
-        currentHp = pickupMaxHp.value;
+        ObCurrentHp = ScriptableObject.CreateInstance<FloatData>();
     }
 
 
@@ -23,8 +22,9 @@ public class BurnObjectBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
     public void Burning()
     {
         BurningEvent.Invoke();
-        currentHp -= pickupCurrentDamage.value;
-        if (currentHp <= 0)
+        ObCurrentHp.value += ObCurrentDamage.value;
+        ObPassingHp.value = ObCurrentHp.value;
+        if (ObCurrentHp.value >= ObMaxHp.value)
         {
             BurnUp();
         }    
@@ -32,14 +32,13 @@ public class BurnObjectBase : MonoBehaviour,IBurning,IBurnUp,IStopBurning
 
     public void BurnUp()
     {
-        print("Burn Up!");
         burnUpEvent.Invoke();
     }
 
     public void StopBurning()
     {
         stopBurningEvent.Invoke();
-        currentHp += pickupMaxHp.value;
+        ObCurrentHp.value += ObMinHp.value;
         
     }
     
