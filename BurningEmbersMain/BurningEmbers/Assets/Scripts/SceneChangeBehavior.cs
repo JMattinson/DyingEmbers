@@ -6,7 +6,7 @@ public class SceneChangeBehavior : MonoBehaviour
 
     public void GameStart()
     {
-        SceneManager.LoadScene("Scenes/GameScene");
+        SceneManager.LoadScene("Scenes/LevelScene"+"1");
     }
 
     public void GameLevelComplete()
