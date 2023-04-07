@@ -99,7 +99,6 @@ public class EnemyBipedBehavior : EnemyBase
     public void OnEnable()
     {
         EnCurrentHp.value = bipedMaxHp.value;
-        print(EnCurrentHp.value);
         EnableEvent.Invoke();
     }
 

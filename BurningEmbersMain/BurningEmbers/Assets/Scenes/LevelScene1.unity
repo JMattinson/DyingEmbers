@@ -344,6 +344,7 @@ GameObject:
   - component: {fileID: 128006480}
   - component: {fileID: 128006479}
   - component: {fileID: 128006478}
+  - component: {fileID: 128006483}
   m_Layer: 5
   m_Name: ScoreNum
   m_TagString: Untagged
@@ -559,6 +560,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128006476}
   m_CullTransparentMesh: 1
+--- !u!114 &128006483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128006476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd6ef6e9f5b6ff478319e6e8e84c486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: f84845ebceeb13a4ab7d6b435b8f25f1, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 128006478}
+        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: efac44418354a7542895a91ac35a7ad7, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &183120017
 GameObject:
   m_ObjectHideFlags: 0
@@ -5473,13 +5502,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2053722600}
-        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
-        m_MethodName: UpdateLabel
-        m_Mode: 2
+      - m_Target: {fileID: 11400000, guid: f84845ebceeb13a4ab7d6b435b8f25f1, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: ec617a47fb592c54b9c6be7955f0892e, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5696,13 +5725,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 128006478}
-        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
-        m_MethodName: UpdateLabel
-        m_Mode: 2
+      - m_Target: {fileID: 11400000, guid: f84845ebceeb13a4ab7d6b435b8f25f1, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: efac44418354a7542895a91ac35a7ad7, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6610,6 +6639,7 @@ GameObject:
   - component: {fileID: 2053722602}
   - component: {fileID: 2053722601}
   - component: {fileID: 2053722600}
+  - component: {fileID: 2053722605}
   m_Layer: 5
   m_Name: CurrencyNum
   m_TagString: Untagged
@@ -6825,6 +6855,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2053722597}
   m_CullTransparentMesh: 1
+--- !u!114 &2053722605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053722597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd6ef6e9f5b6ff478319e6e8e84c486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameActionObj: {fileID: 11400000, guid: f84845ebceeb13a4ab7d6b435b8f25f1, type: 2}
+  onRaiseEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2053722600}
+        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: ec617a47fb592c54b9c6be7955f0892e, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!21 &2067004731
 Material:
   serializedVersion: 8
