@@ -7,8 +7,13 @@ public class FloatData : ScriptableObject
 {
   
     public float value;
+    private float startingValue;
     public UnityEvent onMinEvent, onMaxEvent;
 
+    private void Start()
+    {
+        startingValue = value;
+    }
     public void SetValue(float num)
     {
         value = num;
@@ -64,6 +69,11 @@ public class FloatData : ScriptableObject
             value = num.value;
             onMaxEvent.Invoke();
         }
+    }
+
+    public void ResetValue()
+    {
+        value = startingValue;
     }
     
 }

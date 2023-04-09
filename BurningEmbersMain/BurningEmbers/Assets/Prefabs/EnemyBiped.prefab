@@ -195,7 +195,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   maxHealth: {fileID: 11400000, guid: 27b2213b482d9e348a49e028dd163bd9, type: 2}
-  gameActionObj: {fileID: 11400000, guid: 25cb5da426098de46b0f05d2f2dd5672, type: 2}
 --- !u!114 &3951682649368750110
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,9 +7,13 @@ using UnityEngine.Events;
 public class IntData : ScriptableObject
 {
     public int value;
+    private int startingValue;
     public UnityEvent onMinEvent, onMaxEvent;
     
-    
+    private void Start()
+    {
+        startingValue = value;
+    }
     public void SetValue(int num)
     {
         value = num;
@@ -75,6 +79,10 @@ public class IntData : ScriptableObject
             value = num.value;
             onMaxEvent.Invoke();
         }
+    }
+    public void ResetValue()
+    {
+        value = startingValue;
     }
     
 }
