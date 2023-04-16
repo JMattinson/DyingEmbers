@@ -46,6 +46,7 @@ public class IntData : ScriptableObject
     
         value += num.value;
     }
+    
     public void CheckMin(int num)
     {
         if (value <= num)

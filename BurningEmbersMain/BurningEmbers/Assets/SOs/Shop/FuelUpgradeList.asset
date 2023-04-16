@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29d21e7e2d56f2147bbc2242f0f1b138, type: 3}
-  m_Name: DamageTicRate
+  m_Script: {fileID: 11500000, guid: 1d37d6b72b32faa4cb3fbc79854a4dcb, type: 3}
+  m_Name: FuelUpgradeList
   m_EditorClassIdentifier: 
-  value: 0.2
-  onMinEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onMaxEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  floatList:
+  - 1
+  - 0

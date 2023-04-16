@@ -335,7 +335,6 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   maxHealth: {fileID: 11400000, guid: 674eacc98df4ab346a9d4aff973bf658, type: 2}
-  gameActionObj: {fileID: 11400000, guid: 25cb5da426098de46b0f05d2f2dd5672, type: 2}
 --- !u!114 &6504210522999283428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +416,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3551593533776466690, guid: c637832a6fa8ba14499241fd5ea41acf, type: 3}
+  - {fileID: 2100000, guid: 25892fbb478f128428514335cbb0d7ca, type: 2}
   - {fileID: -5849448959088142572, guid: 3db3a6cb3be655644bdf9ebe2b816478, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -618,7 +617,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   counterNum: {fileID: 0}
-  TicRate: {fileID: 11400000, guid: b3d4dcbe4148161418195171029067fd, type: 2}
+  TicRate: {fileID: 11400000, guid: 4a3d416c76fd9a64e86a13b49a3c4f51, type: 2}
 --- !u!114 &6052980374713003745
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: CurrentCash
   m_EditorClassIdentifier: 
   value: 3
+  onMinEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onMaxEvent:
+    m_PersistentCalls:
+      m_Calls: []
