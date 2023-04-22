@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d37d6b72b32faa4cb3fbc79854a4dcb, type: 3}
   m_Name: SpeedUpgradeList
   m_EditorClassIdentifier: 
-  FloatList: []
+  floatList:
+  - 4
+  - 5
+  - 6

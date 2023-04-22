@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,19 +21,21 @@ public class UpgradeBehavior : MonoBehaviour
     public void canPlayerAffordFloat()
     {
         canAffordUp = (currentCash.value >= price.value);
-        print(canAffordUp);
+        
 
         if (canAffordUp)
         {
-            currentCash.value -= price.value; 
-            
-            floatUpNum.value = floatUpgradePath.floatList[Level.value];
-            canAffordEvent.Invoke();
-            
             Level.value++;
-            MaxoutCheck();
+            MaxoutCheckFloat();
+
+            currentCash.value -= price.value; 
+            floatUpNum.value = floatUpgradePath.floatList[(Level.value)];
+            canAffordEvent.Invoke();
+
+            print("level"+ (Level.value +1 ) + ":" + floatUpNum.value);
+            MaxoutCheckFloat();
             
-            print("level"+ Level.value + ":" + floatUpNum.value);
+            
         }
         else
         {
@@ -48,14 +51,14 @@ public class UpgradeBehavior : MonoBehaviour
         if (canAffordUp)
         {
             Level.value++;
-            MaxoutCheck();
+            MaxoutCheckInt();
 
             currentCash.value -= price.value; 
             intUpNum.value = intUpgradePath.intList[(Level.value)];
             canAffordEvent.Invoke();
 
             print("level"+ (Level.value +1 ) + ":" + intUpNum.value);
-            MaxoutCheck();
+            MaxoutCheckInt();
             
             
         }
@@ -65,10 +68,17 @@ public class UpgradeBehavior : MonoBehaviour
         }
 
     }
-    public void MaxoutCheck()
+
+    public void MaxoutCheckInt()
     {
-        if(Level.value +1 > intUpgradePath.intList.Count-1)
+        if (Level.value + 1 > intUpgradePath.intList.Count - 1)
             maxoutEvent.Invoke();
     }
-    
+    public void MaxoutCheckFloat()
+    {
+        if (Level.value + 1 > floatUpgradePath.floatList.Count - 1)
+            maxoutEvent.Invoke();
+    }
+
+
 }

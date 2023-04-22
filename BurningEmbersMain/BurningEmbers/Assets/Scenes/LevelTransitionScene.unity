@@ -2521,6 +2521,7 @@ GameObject:
   - component: {fileID: 1778276180}
   - component: {fileID: 1778276179}
   - component: {fileID: 1778276178}
+  - component: {fileID: 1778276181}
   m_Layer: 5
   m_Name: HPButton
   m_TagString: Untagged
@@ -2592,7 +2593,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1778276179}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1778276181}
+        m_TargetAssemblyTypeName: UpgradeBehavior, Assembly-CSharp
+        m_MethodName: canPlayerAffordFloat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1778276179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2631,6 +2644,70 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778276176}
   m_CullTransparentMesh: 1
+--- !u!114 &1778276181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778276176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15202d2edb064604985c90f2166589c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatUpgradePath: {fileID: 11400000, guid: 76a457e791a0fb841ae4020d7fc34575, type: 2}
+  intUpgradePath: {fileID: 0}
+  floatUpNum: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+  intUpNum: {fileID: 0}
+  Level: {fileID: 11400000, guid: bf7b3d4b44a15ec4998e7fa7b6ffe9a2, type: 2}
+  currentCash: {fileID: 11400000, guid: ec617a47fb592c54b9c6be7955f0892e, type: 2}
+  price: {fileID: 11400000, guid: 5bb6c4f07b5875445b127fd938d253b9, type: 2}
+  canAffordEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d34bf284dba95604b904d47968be907b, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: e77a6d74a90869544ac5226e1aeb6c2a, type: 2}
+        m_TargetAssemblyTypeName: GameAction, Assembly-CSharp
+        m_MethodName: RaiseAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  cannotAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxoutEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1778276176}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1862270925
 GameObject:
   m_ObjectHideFlags: 0
