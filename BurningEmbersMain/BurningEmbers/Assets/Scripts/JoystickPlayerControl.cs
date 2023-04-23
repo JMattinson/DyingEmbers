@@ -2,7 +2,7 @@
 
 public class JoystickPlayerControl : MonoBehaviour
 {
-    public float speed;
+    public FloatData speed;
     public float rotateSpeed;
 
     public VariableJoystick variableJoystick;
@@ -13,7 +13,7 @@ public class JoystickPlayerControl : MonoBehaviour
         //Whoever coded Unity's new input system should be tried as a warcriminal.
         Vector3 movementDirection = new Vector3(variableJoystick.Horizontal, 0, variableJoystick.Vertical);
         movementDirection.Normalize();
-        transform.Translate(movementDirection * (speed * Time.deltaTime),Space.World);
+        transform.Translate(movementDirection * (speed.value * Time.deltaTime),Space.World);
 
         if (movementDirection != Vector3.zero)
         {

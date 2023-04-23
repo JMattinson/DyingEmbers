@@ -432,6 +432,10 @@ GameObject:
   - component: {fileID: 586123952}
   - component: {fileID: 586123951}
   - component: {fileID: 586123950}
+  - component: {fileID: 586123953}
+  - component: {fileID: 586123955}
+  - component: {fileID: 586123954}
+  - component: {fileID: 586123956}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -505,6 +509,238 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &586123953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586123949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15202d2edb064604985c90f2166589c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatUpgradePath: {fileID: 11400000, guid: 6ddd9e42d341657479dcceaf73d406d9, type: 2}
+  intUpgradePath: {fileID: 0}
+  floatUpNum: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+  intUpNum: {fileID: 0}
+  Level: {fileID: 11400000, guid: 64c0bb60d37f82d44a100f3daeb27ab9, type: 2}
+  currentCash: {fileID: 0}
+  price: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 586123953}
+        m_TargetAssemblyTypeName: UpgradeBehavior, Assembly-CSharp
+        m_MethodName: ResetFloat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cannotAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxoutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  resetEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 6bdcd6561c3a6cd4686c90ea62ef697b, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &586123954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586123949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15202d2edb064604985c90f2166589c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatUpgradePath: {fileID: 11400000, guid: 19ca4405c5093ab41a14dffd0f77a996, type: 2}
+  intUpgradePath: {fileID: 0}
+  floatUpNum: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+  intUpNum: {fileID: 0}
+  Level: {fileID: 11400000, guid: 12a02880b4941fb43986d580313df7f7, type: 2}
+  currentCash: {fileID: 0}
+  price: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 586123954}
+        m_TargetAssemblyTypeName: UpgradeBehavior, Assembly-CSharp
+        m_MethodName: ResetFloat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cannotAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxoutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  resetEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 28bbaf9020ca5ad4eb6aa4a1e5f3ca50, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &586123955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586123949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15202d2edb064604985c90f2166589c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatUpgradePath: {fileID: 11400000, guid: 76a457e791a0fb841ae4020d7fc34575, type: 2}
+  intUpgradePath: {fileID: 0}
+  floatUpNum: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+  intUpNum: {fileID: 0}
+  Level: {fileID: 11400000, guid: bf7b3d4b44a15ec4998e7fa7b6ffe9a2, type: 2}
+  currentCash: {fileID: 0}
+  price: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 586123955}
+        m_TargetAssemblyTypeName: UpgradeBehavior, Assembly-CSharp
+        m_MethodName: ResetFloat
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cannotAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxoutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  resetEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: d34bf284dba95604b904d47968be907b, type: 2}
+        m_TargetAssemblyTypeName: FloatData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: a89bf8bc40d6fc7469211299a7842796, type: 2}
+          m_ObjectArgumentAssemblyTypeName: FloatData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &586123956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586123949}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15202d2edb064604985c90f2166589c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatUpgradePath: {fileID: 0}
+  intUpgradePath: {fileID: 11400000, guid: 8f1d4416e508db244b4f84370aec90e9, type: 2}
+  floatUpNum: {fileID: 0}
+  intUpNum: {fileID: 11400000, guid: 5fa127bbb7d8e604fa1552cfac1421dc, type: 2}
+  Level: {fileID: 11400000, guid: 99ab80df5d7ce124c8216aa6086dc7c8, type: 2}
+  currentCash: {fileID: 0}
+  price: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 586123956}
+        m_TargetAssemblyTypeName: UpgradeBehavior, Assembly-CSharp
+        m_MethodName: ResetInt
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  canAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  cannotAffordEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  maxoutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  resetEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: a6de159db5c6aad479e2e415e346949b, type: 2}
+        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
+        m_MethodName: SetValue
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5fa127bbb7d8e604fa1552cfac1421dc, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &953220456
 GameObject:
   m_ObjectHideFlags: 0

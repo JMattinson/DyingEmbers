@@ -8,8 +8,8 @@ public class EnemyBipedBehavior : EnemyBase
 {
     [Header("Entity Management")]
     public UnityEvent dieEvent, attackEvent,damageEvent, EnableEvent,RespawnEvent;
-    public FloatData bipedMaxHp, EnCurrentHp,enpassHP;
-    public IntData playerCurrentDamage;
+    public FloatData bipedMaxHp, EnCurrentHp,enpassHP,deadPassHP;
+    public IntData playerCurrentDamage,DangerLevel;
     public UnityAction<ImageBehavior> UpdateImage;
 
 
@@ -27,6 +27,8 @@ public class EnemyBipedBehavior : EnemyBase
     {
 
         EnCurrentHp = ScriptableObject.CreateInstance<FloatData>();
+        DangerLevel = ScriptableObject.CreateInstance<IntData>();
+        DangerLevel.value = 1;
         EnCurrentHp.value = bipedMaxHp.value;
         agent = GetComponent<NavMeshAgent>();
         playerPos = GameObject.Find("Player").transform;
@@ -58,7 +60,7 @@ public class EnemyBipedBehavior : EnemyBase
     public override void TakeDamage()
     {
         PlayerInSight = true;
-        EnCurrentHp.value -= playerCurrentDamage.value;
+        EnCurrentHp.value -= (playerCurrentDamage.value/(DangerLevel.value));
         enpassHP.value = EnCurrentHp.value;
         damageEvent.Invoke();
         if (EnCurrentHp.value <= 0)
@@ -73,7 +75,8 @@ public class EnemyBipedBehavior : EnemyBase
         {
             Respawn();
         }
-        EnCurrentHp.value += 1;
+        EnCurrentHp.value += 2;
+        deadPassHP.value = EnCurrentHp.value;
     }
 
     public override void Die()
@@ -84,6 +87,7 @@ public class EnemyBipedBehavior : EnemyBase
     public override void Respawn()
     {
         RespawnEvent.Invoke();
+        DangerLevel.value++;
     }
 
 

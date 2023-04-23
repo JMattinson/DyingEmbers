@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +15,13 @@ public class UpgradeBehavior : MonoBehaviour
 
     private bool canAffordUp;
 
-    public UnityEvent canAffordEvent, cannotAffordEvent,maxoutEvent;
+    public UnityEvent startEvent,canAffordEvent, cannotAffordEvent,maxoutEvent,resetEvent;
+
+
+    private void Start()
+    {
+        startEvent.Invoke();
+    }
 
     public void canPlayerAffordFloat()
     {
@@ -78,6 +83,18 @@ public class UpgradeBehavior : MonoBehaviour
     {
         if (Level.value + 1 > floatUpgradePath.floatList.Count - 1)
             maxoutEvent.Invoke();
+    }
+
+    public void ResetFloat()
+    {
+        floatUpNum.value = floatUpgradePath.floatList[0];
+        resetEvent.Invoke();
+    }
+
+    public void ResetInt()
+    {
+        intUpNum.value = intUpgradePath.intList[0];
+        resetEvent.Invoke();
     }
 
 
