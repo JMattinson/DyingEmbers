@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class JoystickPlayerControl : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class JoystickPlayerControl : MonoBehaviour
 
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
+    public UnityEvent RunTrueEvent,StopEvent;
 
     public void FixedUpdate()
     {
@@ -17,8 +19,14 @@ public class JoystickPlayerControl : MonoBehaviour
 
         if (movementDirection != Vector3.zero)
         {
+            RunTrueEvent.Invoke();
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation,rotateSpeed * Time.deltaTime);
         }
-    }
+        else if (movementDirection == Vector3.zero)
+        {
+            StopEvent.Invoke();
+        }
+        
+        }
 }

@@ -7,7 +7,7 @@ public class EnemyBipedBehavior : EnemyBase
 
 {
     [Header("Entity Management")]
-    public UnityEvent dieEvent, attackEvent,damageEvent, EnableEvent,RespawnEvent;
+    public UnityEvent dieEvent, attackEvent,noAttackEvent,damageEvent, EnableEvent,RespawnEvent;
     public FloatData bipedMaxHp, EnCurrentHp,enpassHP,deadPassHP;
     public IntData playerCurrentDamage,DangerLevel;
     public UnityAction<ImageBehavior> UpdateImage;
@@ -95,8 +95,17 @@ public class EnemyBipedBehavior : EnemyBase
     {
         
         PlayerInAttack = Physics.CheckSphere(transform.position, attackRange,Player);
-        if (PlayerInSight) Hunt();
-        //if (PlayerInAttack) Attack();
+        if (PlayerInSight)
+        {
+            noAttackEvent.Invoke();
+            Hunt();
+            
+        }
+        if (PlayerInAttack)
+        {
+            attackEvent.Invoke();
+            Hunt();
+        }
 
     }
 
