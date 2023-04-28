@@ -21,6 +21,7 @@ public class UpgradeBehavior : MonoBehaviour
     private void Start()
     {
         startEvent.Invoke();
+        setEvent.Invoke();
     }
 
     public void canPlayerAffordFloat()
@@ -37,7 +38,7 @@ public class UpgradeBehavior : MonoBehaviour
             floatUpNum.value = floatUpgradePath.floatList[(Level.value)];
             canAffordEvent.Invoke();
 
-            print("level"+ (Level.value +1 ) + ":" + floatUpNum.value);
+            
             MaxoutCheckFloat();
             
             
@@ -62,7 +63,7 @@ public class UpgradeBehavior : MonoBehaviour
             intUpNum.value = intUpgradePath.intList[(Level.value)];
             canAffordEvent.Invoke();
 
-            print("level"+ (Level.value +1 ) + ":" + intUpNum.value);
+            
             MaxoutCheckInt();
             
             

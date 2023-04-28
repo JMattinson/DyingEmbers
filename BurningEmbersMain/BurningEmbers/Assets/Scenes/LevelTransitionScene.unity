@@ -1795,7 +1795,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: faa44461369953d42aa3c027e06c5b5d, type: 2}
         m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
-        m_MethodName: GetData
+        m_MethodName: SetData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1830,6 +1830,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: bba5f335e1053154d8ebf4c30572cd90, type: 2}
+        m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
+        m_MethodName: SetData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 13f586844ca8aed45ad62c8ac376f6b0, type: 2}
         m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
         m_MethodName: SetData
         m_Mode: 1
@@ -4499,6 +4511,18 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: faa44461369953d42aa3c027e06c5b5d, type: 2}
+        m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
+        m_MethodName: GetData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1778276181}
         m_TargetAssemblyTypeName: UpgradeBehavior, Assembly-CSharp
         m_MethodName: MaxoutCheckFloat
@@ -4695,6 +4719,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: bba5f335e1053154d8ebf4c30572cd90, type: 2}
+        m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
+        m_MethodName: SetData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 13f586844ca8aed45ad62c8ac376f6b0, type: 2}
         m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
         m_MethodName: SetData
         m_Mode: 1

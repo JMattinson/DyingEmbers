@@ -9,13 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3ed5ebc68fb0e24c88d9dbd13090501, type: 3}
-  m_Name: CurrentCash
+  m_Script: {fileID: 11500000, guid: a2a8e31c61bfb2a40be0ef0be34c4256, type: 3}
+  m_Name: CashStatData
   m_EditorClassIdentifier: 
-  value: 0
-  onMinEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  onMaxEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  data: {fileID: 11400000, guid: ec617a47fb592c54b9c6be7955f0892e, type: 2}
+  listData: []
