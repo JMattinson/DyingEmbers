@@ -3,10 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeBehavior : MonoBehaviour
 {
+    public IntData sceneNum;
 
     public void GameStart()
     {
-        SceneManager.LoadScene("Scenes/LevelScene"+"1");
+        SceneManager.LoadScene("Scenes/LevelScene"+sceneNum.value );
     }
 
     public void GameLevelComplete()
