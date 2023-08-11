@@ -1,6 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1102 &-5354976809600894779
+--- !u!1102 &-2697883935074943083
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IgParryBad
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 24c291a1db18d7848ac56860a3b0e162, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-1797956790231502194
 AnimatorState:
   serializedVersion: 6
   m_ObjectHideFlags: 1
@@ -20,7 +46,33 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4a1f302a794cf0e4fa4dcb8523d095b1, type: 2}
+  m_Motion: {fileID: 7400000, guid: ad38145605e6fb745bc16d5fc01ba7b6, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-1779296793529849565
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IgTalk1
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: bce8c68a929908843bf507e22dd7c418, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -177,8 +229,14 @@ AnimatorStateMachine:
     m_State: {fileID: 3678383845796842634}
     m_Position: {x: 990, y: 290, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: -5354976809600894779}
-    m_Position: {x: 1265.9401, y: 308.81766, z: 0}
+    m_State: {fileID: -1797956790231502194}
+    m_Position: {x: 1369.1855, y: 252.85349, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2697883935074943083}
+    m_Position: {x: 1448.6813, y: 308.6327, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -1779296793529849565}
+    m_Position: {x: 1474.6423, y: 409.74408, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -188,7 +246,7 @@ AnimatorStateMachine:
   m_EntryPosition: {x: -20, y: 200, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
-  m_DefaultState: {fileID: -667288825127623401}
+  m_DefaultState: {fileID: -1779296793529849565}
 --- !u!1102 &8832301030499224898
 AnimatorState:
   serializedVersion: 6
