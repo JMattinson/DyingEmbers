@@ -5,6 +5,7 @@ public class JoystickPlayerControl : MonoBehaviour
 {
     public FloatData speed;
     public float rotateSpeed;
+    public bool isIdleAnimStart;
 
     public VariableJoystick variableJoystick;
     public Rigidbody rb;
@@ -19,12 +20,14 @@ public class JoystickPlayerControl : MonoBehaviour
 
         if (movementDirection != Vector3.zero)
         {
+            isIdleAnimStart = true;
             RunTrueEvent.Invoke();
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation,rotateSpeed * Time.deltaTime);
         }
-        else if (movementDirection == Vector3.zero)
+        else if (movementDirection == Vector3.zero && isIdleAnimStart)
         {
+            isIdleAnimStart = false;
             StopEvent.Invoke();
         }
         
